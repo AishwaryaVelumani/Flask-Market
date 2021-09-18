@@ -1,0 +1,7 @@
+Flask_Login==0.5.0
+WTForms==2.3.3
+Flask_SQLAlchemy==2.5.1
+Flask_Bcrypt==0.7.1
+Flask==2.0.1
+Flask_WTF==0.15.1
+gunicorn

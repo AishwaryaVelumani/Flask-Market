@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:rgb(82, 82, 82)">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://i.ibb.co/T2GFTL7/letter-fm-logo-design-template-260nw-1789813841-2.jpg" alt="flask market logo">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Login
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.password.label() }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+
+            <br>
+
+
+            <div class="checkbox mb-3">
+               <h6>Do not have an account?</h6>
+               <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Register</a>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <br>
+        </form>
+    </div>
+</body>
+{% endblock %}
+
+<!-- need to create secret key for forms because user will be giving personal info-->
