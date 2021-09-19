@@ -6,7 +6,7 @@ from market import db
 from flask_login import login_user,logout_user, login_required, current_user
 
 @app.route('/') #one step before func, root url of website
-@app.route('/home')
+#@app.route('/home')
 def home_page():
     return render_template('home.html')
 
