@@ -2,12 +2,13 @@ from flask import Flask #render_templates helps to route to the html files
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-#import os
+import os
 #from market.config import DEV_DB, PROD_DB
 
 app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'
-app.config['SECRET_KEY']='aee8450d7c89cce43cc44e8b'
+SECRET_KEY = os.getenv("KEY")
+app.config['SECRET_KEY']=SECRET_KEY
 db=SQLAlchemy(app) #creates instance of sqlalchemy db
 bcrypt =Bcrypt(app)
 login_manager= LoginManager(app)
