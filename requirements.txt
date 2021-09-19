@@ -5,3 +5,4 @@ Flask_Bcrypt==0.7.1
 Flask==2.0.1
 Flask_WTF==0.15.1
 gunicorn
+email-validator
